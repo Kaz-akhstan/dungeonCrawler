@@ -1,0 +1,32 @@
+@use "reset";
+
+body {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    width: 100ch;
+    height: 60ch;
+    background-color: hsl(0, 0%, 80%);
+}
+
+.field {
+    width: 100ch;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.inventory {
+}
+
+.test {
+}
+
