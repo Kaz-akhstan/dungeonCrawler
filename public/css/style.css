@@ -84,15 +84,18 @@ body {
 
 .screen {
   width: 100ch;
-  height: 60ch;
-  background-color: hsl(0, 0%, 80%);
+  background-color: hsl(0, 0%, 85%);
+  border: 1px solid black;
 }
 
 .field {
   width: 100ch;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
+  display: flex;
+  border: 1px solid black;
+}
+.field > button {
+  width: 100%;
+  padding: 1rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

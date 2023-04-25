@@ -1,9 +1,16 @@
 window.onload = createMap
 const game = document.querySelector("#game")
 const width = 100
-const height = 60
+const height = 20
 const steps = 20
 let map = []
+let X = 0
+let Y = 0
+
+import vector2 from './vector2.js'
+
+let v2 = new vector2(2, 1)
+alert(v2.x + " " + v2.y)
 
 function createMap() {
     for (var i = 0; i < width; i++) {
