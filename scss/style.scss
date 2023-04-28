@@ -16,6 +16,7 @@ body {
     width: 100ch;
     background-color: hsl(0, 0%, 85%);
     border: 1px solid black;
+    line-height: 100%;
 }
 
 .field {
@@ -26,6 +27,15 @@ body {
         width: 100%;
         padding: 1rem 0;
     }
+}
+
+.open {
+
+}
+
+.wall {
+    color: #252525;
+    background-color: gray;
 }
 
 .inventory {
