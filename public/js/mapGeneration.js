@@ -4,7 +4,7 @@ window.onload = createMap
 const game = document.querySelector("#game")
 const width = 100
 const height = 20
-const steps = 20
+const steps = 150
 let screen = []
 let X = 0
 let Y = 0
@@ -22,29 +22,34 @@ function createMap() {
 
     map.push(new vector2(X, Y))
     for (let i = 0; i < steps; i++) {
-        let rn = randomNumber(1, 2)
+        let rn = randomNumber(1, 4)
         switch (rn) {
-            // case 1: //Up
-            //     Y++
-            //     break
-
-            // case 2: //Right
-            //     X++
-            //     break
-
-            // case 3: //Down
-            //     Y--
-            //     break
-
-            // case 4: //Left
-            //     X--
-            //     break
-            case 1: //Right
-                X++
+            case 1: //Up
+                if(Y < height)
+                {
+                    Y++
+                }
                 break
-            
-            case 2:
-                Y--
+
+            case 2: //Right
+                if(X < width)
+                {
+                    X++
+                }
+                break
+
+            case 3: //Down
+                if(Y > 0)
+                {
+                    Y--
+                }
+                break
+
+            case 4: //Left
+                if(X > 0)
+                {
+                    X--
+                }
                 break
         }
         //map[i] = new vector2(X, Y)
@@ -62,12 +67,8 @@ function createScreen()
     }
     for(let i = 0; i < map.length; i++)
     {
-        screen[map[i].x][map[i].y] = '#'    //FUNKAR INTE
+        screen[map[i].x][map[i].y] = '#'
     }
-    alert(screen[0])
-    alert(screen[1])
-    alert(screen[2])
-    alert(screen[3])
     drawScreen()
 }
 
